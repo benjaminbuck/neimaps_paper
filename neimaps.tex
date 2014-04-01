@@ -27,7 +27,7 @@ STAR experiment at Brookhaven National Laboratory}
 \begin{abstract}
 We present the design of a detector used as a particle tracking device in the
 STAR experiment at the RHIC collider of Brookhaven National Laboratories. The
-``stave'' 24 of which make up the completed detector, is a highly mechanically
+``stave,'' 24 of which make up the completed detector, is a highly mechanically
 integrated design comprised of 6 custom silicon sensors mounted on a Kapton
 substrate. 4608 wire bonds connect these sensors to 36 analog front-end chips
 which are mounted on the same substrate. Power and signal connectivity from the
@@ -37,7 +37,8 @@ unique design challenges for this detector and some novel techniques for
 overcoming them.
 \end{abstract}
 \begin{keyword}
-Electrical / Mechanical Integration; Hybrid Substrate; Nuclear Physics
+Electrical and Mechanical Integration; Hybrid Substrate; Nuclear Physics; Carbon
+Fiber Reinforced Polymer
 \end{keyword}
 \end{frontmatter}
 %
@@ -59,8 +60,8 @@ the stave manufacturing. The hybrid is broken up into 2 areas, the sensor area
 and the connector area. In the sensor
 area we desire as little mass as possible to reduce interactions with passing
 particles. For this reason the sensor area, which makes up most of the hybrid,
-is made of 2 0.5~ounce copper layers on a 1~mil Kapton substrate. The connector
-area is made of the same 2 0.5~ounce copper layers but with an additional
+is made of 2 layers of 0.5~ounce copper on a 1~mil Kapton substrate. The connector
+area is made of the same 2 layers of 0.5~ounce copper but with an additional
 1~ounce copper layer and 1~mil Kapton layer. Over both areas is a 1 mil Kapton
 coverlay attached with 1 mil of adhesive. On the bottom layer this coverlay has
 no cutouts and acts as insulation between the copper and the material which make
@@ -131,8 +132,13 @@ located underneath any area where wire bonding will be performed.
 
 Cooling is provided by flowing a synthetic heat transfer fluid, Novec 7200,
 through the aluminum tube which runs through the carbon
-foam. Other detectors using a similar design have observed galvanic corrosion
-between the carbon foam and the aluminum tube. In order to prevent this, the
+foam. Because the IST is installed in the central region of STAR, we needed a
+cooling fluid which would not damage the other detectors surrounding it in the
+event of a leak. Novec 7200 has a very low vapor pressure and leaves no residue when it
+evaporates, making it a good candidate. Novec 7200 was chosen because it has a
+lower ozone-depletion potential than other engineered fluids with similar
+properties.  Other detectors using a similar design have observed galvanic corrosion
+between the carbon foam and the aluminum tube \cite{ref:novec}. In order to prevent this, the
 carbon foam channel was coated in epoxy before the tube was laid in to provide a
 barrier. In addition, all parts of the stave and cooling system are
 electrically grounded.
@@ -141,7 +147,7 @@ Two end pieces called ``closeouts'' were then attached on either end of the stav
 is made of carbon filled PEEK and the other of aluminum. The closeouts have
 holes and slots to provide a way to mount the stave to the finished detector. The
 aluminum closeout is electrically bonded to the carbon face sheets, the carbon
-fiber honeycomb, and the carbon foam. This provides a means the ground the
+fiber honeycomb, and the carbon foam. This provides a means to ground the
 materials in the stave since they are electrically isolated from the hybrid.
 
 Once everything was bonded to one of the face sheets, glue was applied to
@@ -283,7 +289,7 @@ in center is location of a short inside the hybrid.
 \end{center}
 \end{figure}
 
-\section{APV attach}
+\section{APV attachment}
 During production we performed separate assembly steps for the APV chips and the
 silicon sensors. Our production volume was limited by the silicon sensors as they were
 the single most expensive component to purchase and also had the longest lead
@@ -356,13 +362,13 @@ chips. To test each stave, it was attached to the DAQ and operated. Noise and pe
 were recorded over many events and then analyzed.
 
 All staves were then sent back to MIT for further work. Staves that had APV
-chips on them which didn’t pass the noise and pedestal level tests had
+chips on them which did not pass the noise and pedestal level tests had
 those chips removed and replaced and then sent back to BNL. The replaced APV
 chips were bonded and then re-tested before they were sent back to MIT. Staves
 with fully functioning APV chips then had the silicon sensors installed.
 
-\section{Silicon sensor attach}
-The silicon sensor attach was the final assembly step done at MIT. Before the
+\section{Silicon sensor attachment}
+The silicon sensor attachment was the final assembly step done at MIT. Before the
 process begins, all tooling and staves were cleaned with isopropyl alcohol to
 ensure that no contaminants were transferred onto the sensors. Staves were placed
 in MIT-made tooling which held the stave in place. An adjustable blade at the
@@ -507,7 +513,7 @@ currently being investigated.
 \end{center}
 \end{figure}
 %
-Once the entire detector was assembled the support structure was mated with a
+Once the entire IST was assembled the support structure was mated with a
 larger detector support system and inserted into the central region of STAR.
 The detector was then hooked up to electrical and cooling services and run in
 place again to ensure that all detectors are working properly.
@@ -539,6 +545,9 @@ Forward GEM Tracker in STAR,'' IEEE Real Time Conference Record, Berkeley, CA,
 \bibitem{ref:apv}
 L. Jones, ``APV25-s1 User Guide Version 2.2,'' Royal Academy London, 5
 September, 2001. \\
+\bibitem{ref:novec}
+M. L. Brooks {\it et al.}, ``The PHENIX Forward Silicon Vertex Detector,''
+arXiv:1311.3594v2 [physics.ins-det], 14 February 2014.\\
 \end{thebibliography}
 
 \end{document}
