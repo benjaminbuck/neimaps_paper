@@ -45,7 +45,8 @@ Fiber Reinforced Polymer
 \section{Introduction}
 The Intermediate Silicon Tracker (IST) is a silicon based particle detector
 installed at Brookhaven National Laboratory (BNL) in the Relativistic Heavy Ion
-Collider (RHIC). The detector is located in the central region of the experiment
+Collider (RHIC). The detector is located in the central region of the
+Solenoidal Tracker at RHIC (STAR) experiment
 and makes up the third tracking layer in a 4-layer vertex detector
 upgrade. It is comprised 24 staves, each of which is a flexible PCB wrapped
 around a carbon fiber core. Attached to each stave are 6 silicon sensors which
@@ -59,13 +60,13 @@ components are mounted. The hybrid is permanently bonded to the stave during
 the stave manufacturing. The hybrid is broken up into 2 areas, the sensor area
 and the connector area. In the sensor
 area we desire as little mass as possible to reduce interactions with passing
-particles. For this reason the sensor area, which makes up most of the hybrid,
+particles. For this reason, the sensor area, which makes up most of the hybrid,
 is made of 2 layers of 0.5~ounce copper on a 1~mil Kapton substrate. The connector
 area is made of the same 2 layers of 0.5~ounce copper but with an additional
 1~ounce copper layer and 1~mil Kapton layer. Over both areas is a 1 mil Kapton
-coverlay attached with 1 mil of adhesive. On the bottom layer this coverlay has
-no cutouts and acts as insulation between the copper and the material which make
-up the stave. On the top layer large areas of this cover lay are cut out around
+coverlay attached with 1 mil of adhesive. This coverlay has no cutouts on the
+bottom layer and acts as insulation between the copper and the structural
+material in the stave. On the top layer large areas of this cover lay are cut out around
 any area with bonding pads or component pads. Conventional solder mask is
 applied to this area as shown in figure~\ref{fig:hybrid}. The hybrids are finished with ENEPIG for compatibility
 with both wire bonding and conventional soldering. In order to keep the copper
@@ -130,16 +131,17 @@ radiation length but is homogeneous unlike the carbon fiber honeycomb. This
 uniformity makes it more suitable for wire bonding, so the carbon foam is
 located underneath any area where wire bonding will be performed.
 
-Cooling is provided by flowing a synthetic heat transfer fluid, Novec 7200,
+Cooling is provided by flowing a synthetic heat transfer fluid, 3M\textsuperscript{TM}
+Novec\textsuperscript{TM} 7200 Engineered Fluid,
 through the aluminum tube which runs through the carbon
 foam. Because the IST is installed in the central region of STAR, we needed a
 cooling fluid which would not damage the other detectors surrounding it in the
-event of a leak. Novec 7200 has a very low vapor pressure and leaves no residue when it
-evaporates, making it a good candidate. Novec 7200 was chosen because it has a
+event of a leak. Novec has a very low vapor pressure, leaves no residue when it
+evaporates and has a very high resistivity, making it a good candidate. Novec was chosen because it has a
 lower ozone-depletion potential than other engineered fluids with similar
 properties.  Other detectors using a similar design have observed galvanic corrosion
 between the carbon foam and the aluminum tube \cite{ref:novec}. In order to prevent this, the
-carbon foam channel was coated in epoxy before the tube was laid in to provide a
+carbon foam channel was coated with epoxy before the tube was laid in to provide a
 barrier. In addition, all parts of the stave and cooling system are
 electrically grounded.
 
@@ -205,7 +207,7 @@ columns. The bonding pads are arranged in 2 rows of 64 pads. The pads are
 \section{APV chip}
 The APV25-s1 chip is the readout and pre-amplifier ASIC for the sensors. It has
 128 channels each with a charge sensitive pre-amplifier, shaper, and 4~$\mu$s long
-pipeline. Events are read into the pipeline at 40~MHz. Events in the pipelien are selected by
+pipeline. Events are read into the pipeline at 40~MHz. Events in the pipeline are selected by
 triggers and marked for readout. A single differential pair per chip reads out each of
 the 128 channels in series for a selected event.
 
@@ -219,10 +221,10 @@ the left and right, and control bonding pads on the bottom.
 \end{figure}
 %
 This ASIC was designed by the Imperial College in London for the Compact Muon
-Solenoid (CMS) running at the Large Hadron Collider (LHC). It was designed
+Solenoid (CMS) running at the Large Hadron Collider (LHC)~\cite{ref:apv_nim}. It was designed
 for the high radiation environment present in the middle of a physics experiment
 and used an IBM 0.25~$\mu$m radiation hard process. Detailed information about the
-APV chip can be found in~\cite{ref:apv}.  Figure~\ref{fig:apv} shows the APV 
+APV chip can be found in~\cite{ref:apv} and~\cite{ref:apv_nim}.  Figure~\ref{fig:apv} shows the APV 
 chip bonded to a stave.
 
 \section{Passive attach}
@@ -351,7 +353,7 @@ and power bonds on the right.
 \end{center}
 \end{figure}
 %
-Bonded APV chips had to be tested before silicon sensors can be attached. In an
+Bonded APV chips had to be tested before silicon sensors could be attached. In an
 experimental assembly building located next to the STAR detector we set up a
 clean room with a testing station for the IST. The testing station consists of
 a rack to hold detectors with a cosmic ray trigger inside a light-tight box
@@ -369,7 +371,7 @@ with fully functioning APV chips then had the silicon sensors installed.
 
 \section{Silicon sensor attachment}
 The silicon sensor attachment was the final assembly step done at MIT. Before the
-process begins, all tooling and staves were cleaned with isopropyl alcohol to
+process began, all tooling and staves were cleaned with isopropyl alcohol to
 ensure that no contaminants were transferred onto the sensors. Staves were placed
 in MIT-made tooling which held the stave in place. An adjustable blade at the
 top edge of the stave was moved until it marked the top edge of where each sensor
@@ -430,7 +432,7 @@ bonds. Depending on the amount of technician intervention, this process would
 take between 1 and 2 hours.  The end result can be seen in figure~\ref{fig:si_bonded}
 and figure~\ref{fig:full_stave}.
 
-\begin{figure}
+\begin{figure}[h]
 \begin{center}
 \includegraphics[width=6.5in, keepaspectratio=true, angle=0]{graphics/si_bonded.jpg}
 \caption{Closeup of a sensor on a completed stave.  The encapsulant is difficult
@@ -440,14 +442,14 @@ to see because of its transparency.
 \end{figure}
 %
 Fully bonded staves were brought back into the IST clean room and tested
-again. Using the DAQ system we were able to identify any shorted bonding wires
+again. Using the DAQ system, we were able to identify any shorted bonding wires
 and determine if it was possible to repair them. In addition, baseline noise
 and pedestal information was again recorded. We found very few errors with the
 bonding done at BNL and nearly all of the staves produced are in use in the
 final detector. Fully functioning staves then had an encapsulant applied to the
 bonding wires to protect them during handling and installation. The first
 prototypes used Dymax 9001-E-V3.1 cured with a Dymax 5000-EC series ultraviolet
-curing lamp. We found that after exposure to the UV light source some APV chips
+curing lamp. We found that, after exposure to the UV light source, some APV chips
 would no longer function or have higher input noise. While the exact cause of
 this was unknown, we suspect that the silicon was damaged by the UV treatment.
 For production staves, Dow Corning Sylgard 186 elastomer was used. This
@@ -455,7 +457,7 @@ encapsulant has a room temperature cure and did not affect the performance of
 the APV chips.  A fully completed stave, ready for installation, is shown in
 figure~\ref{fig:full_stave}.
 
-\begin{figure}
+\begin{figure}[h]
 \begin{center}
 \includegraphics[width=6.5in, keepaspectratio=true, angle=0]{graphics/full_stave.jpg}
 \caption{A completed stave ready for installation.
@@ -481,7 +483,7 @@ along with the ``rough'' position of each detector inside the experiment and wil
 be able to align the detector from tracks generated in this and other detectors
 (see figure~\ref{fig:survey}).
 
-\begin{figure}
+\begin{figure}[h]
 \begin{center}
 \includegraphics[height=2in, keepaspectratio=true, angle=0]{graphics/survey.jpg}
 \includegraphics[height=2in, keepaspectratio=true, angle=0]{graphics/event.png}
@@ -505,7 +507,7 @@ tested with a helium leak checker. Two staves were found to have leaks inside
 the cooling tube. These staves were not installed and the cause of the leaks is
 currently being investigated.
 
-\begin{figure}
+\begin{figure}[h]
 \begin{center}
 \includegraphics[width=5in, keepaspectratio=true, angle=0]{graphics/full.jpg}
 \caption{Completed IST detector ready for insertion into STAR.
@@ -548,6 +550,9 @@ September, 2001. \\
 \bibitem{ref:novec}
 M. L. Brooks {\it et al.}, ``The PHENIX Forward Silicon Vertex Detector,''
 arXiv:1311.3594v2 [physics.ins-det], 14 February 2014.\\
+\bibitem{ref:apv_nim}
+M. J. French, {\it et al.}, ``Design and results from the APV25, a deep
+sub-micron CMOS front-end chip for the CMS tracker,'' Nuclear Instruments and
+Methods in Physics Research A 466 (2001) 359-365.\\
 \end{thebibliography}
-
 \end{document}
