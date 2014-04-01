@@ -13,6 +13,8 @@ STAR experiment at Brookhaven National Laboratory}
 \ead{bbuck@mit.edu}
 \author[lbl]{Eric~Anderssen}
 \author[mit]{Jason~Bessuile}
+\author[lbl]{Mario~Cepeda}
+\author[lbl]{Thomas~Johnson}
 \author[mit]{James~Kelsey}
 \author[mit]{Gerrit~van~Nieuwenhiuzen}
 \author[iu]{Gerard~Visser}
@@ -20,6 +22,8 @@ STAR experiment at Brookhaven National Laboratory}
 \address[lbl]{Lawrence Berkeley National Laboratory, Berkeley, CA, USA}
 \address[mit]{Massachusetts Institute of Technology, Cambring, MA, USA}
 \cortext[cor_au]{Corresponding author}
+%
+%
 \begin{abstract}
 We present the design of a detector used as a particle tracking device in the
 STAR experiment at the RHIC collider of Brookhaven National Laboratories. The
@@ -33,9 +37,10 @@ unique design challenges for this detector and some novel techniques for
 overcoming them.
 \end{abstract}
 \begin{keyword}
-keywords here XXXXX
+Electrical / Mechanical Integration; Hybrid Substrate; Nuclear Physics
 \end{keyword}
 \end{frontmatter}
+%
 \section{Introduction}
 The Intermediate Silicon Tracker (IST) is a silicon based particle detector
 installed at Brookhaven National Laboratory (BNL) in the Relativistic Heavy Ion
@@ -52,7 +57,7 @@ the flexible circuit onto which the silicon sensors, APV readout chips, and pass
 components are mounted. The hybrid is permanently bonded to the stave during
 the stave manufacturing. The hybrid is broken up into 2 areas, the sensor area
 and the connector area. In the sensor
-area we desired as little mass as possible to reduce interactions with passing
+area we desire as little mass as possible to reduce interactions with passing
 particles. For this reason the sensor area, which makes up most of the hybrid,
 is made of 2 0.5~ounce copper layers on a 1~mil Kapton substrate. The connector
 area is made of the same 2 0.5~ounce copper layers but with an additional
@@ -63,7 +68,7 @@ up the stave. On the top layer large areas of this cover lay are cut out around
 any area with bonding pads or component pads. Conventional solder mask is
 applied to this area as shown in figure~\ref{fig:hybrid}. The hybrids are finished with ENEPIG for compatibility
 with both wire bonding and conventional soldering. In order to keep the copper
-weight down, all vias are selectively plated through.  This selectave plating
+weight down, all vias are selectively plated through.  This selective plating
 can be seen in figure~\ref{fig:passive}.
 
 \begin{figure}[h]
@@ -79,12 +84,12 @@ Each hybrid provides the electrical connection from the APV chips to the
 connector site on one end of the stave. Electrically the hybrid is broken up
 into three separate circuits which share a common ground. Each circuit
 serves 12 APV chips and 2 sensors. The APV chips require power, analog output,
-and controls signals to be routed to each chip. The sensors require a bias line
+and control signals to be routed to each chip. The sensors require a bias line
 which must withstand up to 200~V.
 
-In the sensor area we required as little mass as possible. The sensor area had
+In the sensor area we require as little mass as possible. Because of this, the sensor area has
 only two routing layers, so careful routing was needed to optimize the power net
-distribution and signal distribution. The power nets were distributed as three
+distribution and signal distribution. The power nets are distributed as three
 large busses per section for +1.25~V, -1.25~V, and ground. The power supplies
 for the staves operate on a remote regulation scheme, so a sense net from each bus is
 routed locally away from the APV chips in each section and back to the
@@ -106,18 +111,20 @@ produce any appreciable thermal load.
 
 \begin{figure}[ht]
 \begin{center}
-\includegraphics[width=3in, keepaspectratio=true, angle=0]{graphics/cooling_tube.png}
-\caption{The cooling tube runs directly beneath the APV chips which generate nearly
-all of the heat on the stave.
+\includegraphics[height=1.7in, keepaspectratio=true, angle=0]{graphics/cooling_tube.png}
+\includegraphics[height=1.7in, keepaspectratio=true, angle=0]{graphics/apv_thermal.jpg}
+\caption{Left shows the cooling tube running directly beneath the APV chips which generate nearly
+all of the heat on the stave.  Right shows a thermal image of a completed stave
+running in still air with no cooling.
 \label{fig:cooling_tube}}
 \end{center}
 \end{figure}
 %
 \section{Stave design}
-Each hybrid is assembled into a stave at the Lawrence Berkeley National Laboratory (LBNL) Composites Shop in Berkeley,
-California. Two carbon fiber cover sheets are co-cured to a hybrid and then a
-carbon fiber honeycomb is glued to one side. A block of carbon foam with a
-channel cut in it for cooling is also glued on. The carbon foam has a lower
+Each hybrid was assembled into a stave at the Lawrence Berkeley National Laboratory (LBNL) Composites Shop in Berkeley,
+California. Two carbon fiber cover sheets were co-cured to a hybrid and then a
+carbon fiber honeycomb was glued to one side. A block of carbon foam with a
+channel cut in it for cooling was also glued on. The carbon foam has a lower
 radiation length but is homogeneous unlike the carbon fiber honeycomb. This
 uniformity makes it more suitable for wire bonding, so the carbon foam is
 located underneath any area where wire bonding will be performed.
@@ -126,21 +133,21 @@ Cooling is provided by flowing a synthetic heat transfer fluid, Novec 7200,
 through the aluminum tube which runs through the carbon
 foam. Other detectors using a similar design have observed galvanic corrosion
 between the carbon foam and the aluminum tube. In order to prevent this, the
-carbon foam channel is coated in epoxy before the tube is laid in to provide a
+carbon foam channel was coated in epoxy before the tube was laid in to provide a
 barrier. In addition, all parts of the stave and cooling system are
 electrically grounded.
 
-Two end pieces called ``closeouts'' are attached on either end of the stave. One
+Two end pieces called ``closeouts'' were then attached on either end of the stave. One
 is made of carbon filled PEEK and the other of aluminum. The closeouts have
 holes and slots to provide a way to mount the stave to the finished detector. The
 aluminum closeout is electrically bonded to the carbon face sheets, the carbon
 fiber honeycomb, and the carbon foam. This provides a means the ground the
 materials in the stave since they are electrically isolated from the hybrid.
 
-Once everything is bonded to one of the face sheets, glue is applied to
-the other side and it is folded over 180~degrees to complete the stave.
-Figure~\ref{fig:stave_assmb} shows the stave right before this step. Once
-cured staves are inspected and then sent to MIT for further assembly.
+Once everything was bonded to one of the face sheets, glue was applied to
+the other side and it was folded over 180~degrees to complete the stave.
+Figure~\ref{fig:stave_assmb} shows the stave right before this step. Fully
+cured staves were inspected and then sent to MIT for further assembly.
 
 \begin{figure}[h]
 \begin{center}
@@ -190,15 +197,15 @@ columns. The bonding pads are arranged in 2 rows of 64 pads. The pads are
 \end{figure}
 %
 \section{APV chip}
-The APV25-s1 chip is the readout and preamplifier ASIC for the sensors. It has
-128 channels each with a charge sensitive preamplifier, shaper, and 4~$\mu$s long
-pipeline. Events are read into the pipeline at 40~MHz. Events are selected by
+The APV25-s1 chip is the readout and pre-amplifier ASIC for the sensors. It has
+128 channels each with a charge sensitive pre-amplifier, shaper, and 4~$\mu$s long
+pipeline. Events are read into the pipeline at 40~MHz. Events in the pipelien are selected by
 triggers and marked for readout. A single differential pair per chip reads out each of
 the 128 channels in series for a selected event.
 
 \begin{figure}[ht]
 \begin{center}
-\includegraphics[width=3in, keepaspectratio=true, angle=0]{graphics/apv_chip.jpg}
+\includegraphics[height=2in, keepaspectratio=true, angle=0]{graphics/apv_chip.jpg}
 \caption{APV chip showing input bonding pads on the top, power bonding pads on
 the left and right, and control bonding pads on the bottom.
 \label{fig:apv}}
@@ -208,7 +215,7 @@ the left and right, and control bonding pads on the bottom.
 This ASIC was designed by the Imperial College in London for the Compact Muon
 Solenoid (CMS) running at the Large Hadron Collider (LHC). It was designed
 for the high radiation environment present in the middle of a physics experiment
-and uses an IBM 0.25~$\mu$m radiation hard process. Detailed information about the
+and used an IBM 0.25~$\mu$m radiation hard process. Detailed information about the
 APV chip can be found in~\cite{ref:apv}.  Figure~\ref{fig:apv} shows the APV 
 chip bonded to a stave.
 
@@ -219,17 +226,25 @@ bypassing the APV chips. In addition, there is a small temperature sensor,
 termination resistors for the clock and trigger lines, protection resistors for
 the sensor bias lines, and a connector for each section.
 
-The connectors used were the Samtec TEM and SEM series. They provided a low
-mating height and high pin density which was ideal for our application. The
-pins were extremely fragile however so extreme care had to be taken during
+The connectors used were the Samtec TEM and SEM series. They provide a low
+mating height and high pin density which is ideal for our application. The
+pins are extremely fragile, however, so extreme care had to be taken during
 testing and assembly to reduce the number of mating cycles and prevent any
 connectors from being damaged.
 
 The temperature sensor used was a Texas Instruments TMP102 which shares the same
 I2C bus as the APV chips in one of the sections. A computational fluid dynamics (CFD) study was done to
 determine the location of the hottest spot on a stave assuming nominal operating
-conditions. The temperature sensor is placed in this location.
+conditions (see figure~\ref{fig:cfd}). The temperature sensor is placed in this location.
 
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=3in, keepaspectratio=true, angle=0]{graphics/cfd.jpg}
+\caption{CFD study showing two staves which make up a single cooling loop.
+\label{fig:cfd}}
+\end{center}
+\end{figure}
+%
 The passives were soldered onto the hybrids after stave assembly. Because the
 hybrid was already attached to the carbon fiber parts of the stave, it
 could not be put into a solder oven and had to be hand-assembled. Proxy
@@ -278,7 +293,7 @@ installed on the staves first, wire bonded, and tested to make sure they were
 fully functional. Only after all APV chips on a stave were verified to be
 working properly were silicon sensors attached.
 
-The APVs are glued directly to the hybrid using a conductive epoxy, TRA-DUCT
+The APV chips were glued directly to the hybrid using a conductive epoxy, TRA-DUCT
 2902. A pneumatic dispenser was used to apply a uniform amount of glue for each
 APV chip. The glue is both thermally and electrically conductive and acts as a
 means to connect the back side to VSS and as a means to conduct heat away from
@@ -291,9 +306,9 @@ technician to align each chip manually. The tooling provides an edge which all
 APV chips are pressed against to set the ``y'' alignment. Then the technician
 aligns the bonding pads on the APV chip with copper features on the hybrid to
 ensure a precise alignment in ``x''. The tooling used for this is shown in
-figure~\ref{fig:apv_attach}. This alignment step is most important
-because the mounted APV chips will then have to match exactly the location of
-the output pad sites on the silicon sensors. Misalignment will make the bonding
+figure~\ref{fig:apv_attach}. This alignment step was most important
+because the mounted APV chips would then have to match exactly the location of
+the output pad sites on the silicon sensors. Misalignment would make the bonding
 process more difficult and increase the likelihood of shorts between wire bonds.
 All of the alignment was done by hand under a microscope by a skilled
 technician.
@@ -302,66 +317,66 @@ technician.
 \begin{center}
 \includegraphics[width=5in, keepaspectratio=true, angle=0]{graphics/apv_attach_tooling.jpg}
 \caption{APV chips are pressed up against the white guide to provide ``y'' coordinate
-alignment.  A technician uses a microscope to align the chips in the ``x'' coordiante.
+alignment.  A technician uses a microscope to align the chips in the ``x'' coordinate.
 \label{fig:apv_attach}}
 \end{center}
 \end{figure}
 %
 \section{APV bonding and testing}
-Staves with APV chips attached are sent to the Instrumentation Division at
+Staves with APV chips attached were sent to the Instrumentation Division at
 Brookhaven National Laboratory for wire bonding and testing. Wire bonding was
 done on a Hesse \& Knipps Bond Jet 815 bonding machine using 1~mil aluminum
 wire. A program for the bonding machine was written to wire bond each APV chip
 automatically, but inspection was done by a bonding technician during the
 bonding process to ensure the operation went smoothly.  Example images from the
 inspection are shown in figure~\ref{fig:apv_bond}. During this
-operation 31 control nets are bonded from the hybrid to the APV chip and 21
-power nets are bonded from the hybrid to the APV chip. There are a total of 1872
-wire bonds for this operation. The stave is held down using only the stock
-vacuum chuck on the bonding machine. No additional fixture is needed.
+operation 31 control nets were bonded from the hybrid to the APV chip and 21
+power nets are bonded from the hybrid to the APV chip. There were a total of 1872
+wire bonds for this operation. The stave was held down using only the stock
+vacuum chuck on the bonding machine. No additional fixture was needed.
 
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=2.5in, keepaspectratio=true, angle=0]{graphics/control.jpg}
 \includegraphics[width=2.5in, keepaspectratio=true, angle=0]{graphics/power.jpg}
 \caption{Close up of freshly made bonds on the APV.  Control bonds on the left
-and power bonds on the right
+and power bonds on the right.
 \label{fig:apv_bond}}
 \end{center}
 \end{figure}
 %
-Bonded APV chips must be tested before silicon sensors can be attached. In an
+Bonded APV chips had to be tested before silicon sensors can be attached. In an
 experimental assembly building located next to the STAR detector we set up a
 clean room with a testing station for the IST. The testing station consists of
 a rack to hold detectors with a cosmic ray trigger inside a light-tight box
 (ambient light will create noise on the sensors due to the photoelectric effect.)
-The staves are attached to a data acquisition system (DAQ) (see~\cite{ref:daq} for more information)
-which provides power and control signal and digitizes the data from the APV
-chips. To test each stave, it is attached to the DAQ and operated. Noise and pedestal levels
-are recorded over many events and then analyzed.
+The staves were attached to a data acquisition system (DAQ) (see~\cite{ref:daq} for more information)
+which provided power and control signals and digitized the data from the APV
+chips. To test each stave, it was attached to the DAQ and operated. Noise and pedestal levels
+were recorded over many events and then analyzed.
 
-All staves are then sent back to MIT for further work. Staves that have APV
-chips on them which didn’t pass the noise and pedestal level tests will have
+All staves were then sent back to MIT for further work. Staves that had APV
+chips on them which didn’t pass the noise and pedestal level tests had
 those chips removed and replaced and then sent back to BNL. The replaced APV
-chips are bonded and then re-tested before they are sent back to MIT. Staves
-with fully functioning APV chips then have the silicon sensors installed.
+chips were bonded and then re-tested before they were sent back to MIT. Staves
+with fully functioning APV chips then had the silicon sensors installed.
 
 \section{Silicon sensor attach}
-The silicon sensor attach is the final assembly step done at MIT. Before the
-process begins, all tooling and staves are cleaned with isopropyl alcohol to
-ensure that no contaminants are transferred onto the sensors. Staves are placed
-in MIT-made tooling which holds the stave in place. An adjustable blade at the
-top edge of the stave is moved until it marks the top edge of where each sensor
-should sit. The blade is fastened in position and then the sensor attach
-begins.
+The silicon sensor attach was the final assembly step done at MIT. Before the
+process begins, all tooling and staves were cleaned with isopropyl alcohol to
+ensure that no contaminants were transferred onto the sensors. Staves were placed
+in MIT-made tooling which held the stave in place. An adjustable blade at the
+top edge of the stave was moved until it marked the top edge of where each sensor
+would sit. The blade was fastened in position and then the sensor attach
+began.
 
 The sensors are held down with two different types of epoxy as shown in figure~\ref{fig:si_glue}. The first is a
 conductive epoxy needed to make a good contact between the aluminized back side
-of the sensor and the traces below, which carry the bias voltage. We use the
+of the sensor and the traces below, which carry the bias voltage. We used the
 same TRA-DUCT 2902 adhesive for this. The second epoxy is EPON 828 resin with
-VERSAMID 140 hardener. We use this epoxy for mechanical strength and stability since the
-conductive epoxy is not very strong. A single line of conductive epoxy is put
-down and then several lines of conventional epoxy are applied to make a strong
+VERSAMID 140 hardener. We used this epoxy for mechanical strength and stability since the
+conductive epoxy is not very strong. A single line of conductive epoxy was put
+down and then several lines of conventional epoxy were applied to make a strong
 bond. We found that the working time after applying the glue was about 30
 minutes after which it would be much more difficult to get the sensor to lie
 flat.
@@ -375,10 +390,10 @@ a sensor being placed and highlight the two different types of epoxy used.
 \end{center}
 \end{figure}
 %
-The silicon sensors are aligned in a similar way to the APV chips. The tooling
-provides a stop in the ``y'' direction so the technician need only focus on
-alignment in the ``x'' direction. Under a microscope, a technician will align the
-sensor bonding pads with the APV bonding pads checking all 6 APVs for each
+The silicon sensors were aligned in a similar way to the APV chips. The tooling
+provided a stop in the ``y'' direction so the technician needed only focus on
+alignment in the ``x'' direction. Under a microscope, a technician would align the
+sensor bonding pads with the APV bonding pads checking all 6 APV chips for each
 sensor. An example view through the microscope during this alignment procedure
 is shown in figure~\ref{fig:si_align}. After all sensors were aligned, weights were applied to the sensors.
 In early prototypes we found that the sensors would drift during the curing
@@ -389,7 +404,7 @@ they would be packaged and transported.
 
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=4in, keepaspectratio=true, angle=0]{graphics/si_align.jpg}
+\includegraphics[width=2in, keepaspectratio=true, angle=0]{graphics/si_align.jpg}
 \caption{The reticule in the microscope is used to align the bonding pads
 between a sensor and the APV chips which serve it.
 \label{fig:si_align}}
@@ -399,7 +414,7 @@ between a sensor and the APV chips which serve it.
 \section{Silicon sensor bonding and testing}
 The bonding of the silicon sensors took place at the same Instrumentation
 Division at BNL on the same bonding equipment. Again 1~mil aluminum wire was
-used. An automatic bonding program is used but we required close supervision by
+used. An automatic bonding program was used but we required close supervision by
 the technician. Because of the size and pitch of the bonding pads it was
 important to catch any error and repair it before bonding continued. The
 bonding process put down 128 bonds between each APV chip and each silicon sensor
@@ -418,8 +433,8 @@ to see because of its transparency.
 \end{center}
 \end{figure}
 %
-Fully bonded staves would be brought back into the IST clean room and tested
-again. Using the DAQ system we are able to identify any shorted bonding wires
+Fully bonded staves were brought back into the IST clean room and tested
+again. Using the DAQ system we were able to identify any shorted bonding wires
 and determine if it was possible to repair them. In addition, baseline noise
 and pedestal information was again recorded. We found very few errors with the
 bonding done at BNL and nearly all of the staves produced are in use in the
@@ -442,7 +457,7 @@ figure~\ref{fig:full_stave}.
 \end{center}
 \end{figure}
 %
-After the encapsulation the staves are tested extensively and optically surveyed
+After the encapsulation the staves were tested extensively and optically surveyed
 before being installed.
 
 \section{Optical survey}
@@ -452,8 +467,8 @@ position of the detector to a higher degree of accuracy. We are able to do this
 by aligning tracks which pass through the IST as well as other detectors. We
 can reduce the number of tracks needed to do this alignment by knowing very
 precisely how the sensors on a single stave are located relative to each other.
-Before installation each of the staves is placed on an optical survey station
-and measured. The survey station, a Nikon VM-150, is used to measure each of
+Before installation each of the staves was placed on an optical survey station
+and measured. The survey station, a Nikon VM-150, was used to measure each of
 the staves. We estimate the accuracy of these measurements to be about 5~$\mu$m in
 the plane of the detector and 50~$\mu$m out of plane. We combine this information
 along with the ``rough'' position of each detector inside the experiment and will
@@ -472,14 +487,14 @@ surround it.
 \end{figure}
 %
 \section{Installation}
-Fully functional staves are installed on a carbon fiber support structure
+Fully functional staves were installed on a carbon fiber support structure
 arranged to have full azimuthal coverage. As seen in figure~\ref{fig:full} The silicon components are facing
 into the support structure which protects the silicon from damage during the
-full installation process. Electrical connections are laid on the tube and
-connected to each of the detectors. We are able to run the detectors in place
-to ensure that all electrical connections are sound. Data is taken to establish
+full installation process. Electrical connections were laid on the tube and
+connected to each of the detectors. We were able to run the detectors in place
+to ensure that all electrical connections were sound. Data was taken to establish
 the baseline noise and pedestal data before final installation. Finally, cooling
-lines are attached to the cooling tubes running through the staves and are
+lines were attached to the cooling tubes running through the staves and were
 tested with a helium leak checker. Two staves were found to have leaks inside
 the cooling tube. These staves were not installed and the cause of the leaks is
 currently being investigated.
@@ -492,9 +507,9 @@ currently being investigated.
 \end{center}
 \end{figure}
 %
-Once the entire detector is assembled the support structure is mated with a
+Once the entire detector was assembled the support structure was mated with a
 larger detector support system and inserted into the central region of STAR.
-The detector is then hooked up to electrical and cooling services and run in
+The detector was then hooked up to electrical and cooling services and run in
 place again to ensure that all detectors are working properly.
 
 \section{Summary}
