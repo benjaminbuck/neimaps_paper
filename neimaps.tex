@@ -2,6 +2,10 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{geometry}
+\usepackage{siunitx}
+%declare english units to use withing the siunitx package
+\DeclareSIUnit\mil{mil}
+\DeclareSIUnit\ounce{oz.}
 \geometry{textheight=10in, textwidth=6.5in}
 \journal{New England iMAPS}
 \begin{document}
@@ -61,10 +65,10 @@ the stave manufacturing. The hybrid is broken up into 2 areas, the sensor area
 and the connector area. In the sensor
 area we desire as little mass as possible to reduce interactions with passing
 particles. For this reason, the sensor area, which makes up most of the hybrid,
-is made of 2 layers of 0.5~ounce copper on a 1~mil Kapton substrate. The connector
-area is made of the same 2 layers of 0.5~ounce copper but with an additional
-1~ounce copper layer and 1~mil Kapton layer. Over both areas is a 1 mil Kapton
-coverlay attached with 1 mil of adhesive. This coverlay has no cutouts on the
+is made of 2 layers of \SI{0.5}{\ounce} copper on a \SI{1}{\mil} Kapton substrate. The connector
+area is made of the same 2 layers of \SI{0.5}{\ounce} copper but with an additional
+\SI{1}{\ounce} copper layer and \SI{1}{\mil} Kapton layer. Over both areas is a \SI{1}{\mil} Kapton
+coverlay attached with \SI{1}{\mil} of adhesive. This coverlay has no cutouts on the
 bottom layer and acts as insulation between the copper and the structural
 material in the stave. On the top layer large areas of this cover lay are cut out around
 any area with bonding pads or component pads. Conventional solder mask is
@@ -87,17 +91,17 @@ connector site on one end of the stave. Electrically the hybrid is broken up
 into three separate circuits which share a common ground. Each circuit
 serves 12 APV chips and 2 sensors. The APV chips require power, analog output,
 and control signals to be routed to each chip. The sensors require a bias line
-which must withstand up to 200~V.
+which must withstand up to \SI{200}{\volt}.
 
 In the sensor area we require as little mass as possible. Because of this, the sensor area has
 only two routing layers, so careful routing was needed to optimize the power net
 distribution and signal distribution. The power nets are distributed as three
-large busses per section for +1.25~V, -1.25~V, and ground. The power supplies
+large busses per section for \SI{+1.25}{\volt}, \SI{-1.25}{\volt}, and ground. The power supplies
 for the staves operate on a remote regulation scheme, so a sense net from each bus is
 routed locally away from the APV chips in each section and back to the
 connectors. For
 the analog output signals, a differential pair from each APV chip is routed to the
-connectors. The analog output is a 100~ohm differential current mode signal. Source
+connectors. The analog output is a \SI{100}{\ohm} differential current mode signal. Source
 termination is provided at the board which plugs into the stave. In addition,
 the APV chips use I2C for slow controls to set various parameters of the chip.
 These nets are also routed as a bus to each of the chips in a section. Finally,
@@ -142,8 +146,10 @@ lower ozone-depletion potential than other engineered fluids with similar
 properties.  Other detectors using a similar design have observed galvanic corrosion
 between the carbon foam and the aluminum tube \cite{ref:novec}. In order to prevent this, the
 carbon foam channel was coated with epoxy before the tube was laid in to provide a
-barrier. In addition, all parts of the stave and cooling system are
-electrically grounded.
+barrier. The target running temperature is \SI{25}{\degreeCelsius} which is above the
+dew point in the experimental hall; this will prevent moisture from condensing
+on the detector which could facilitate galvanic corrosion. In addition, all
+parts of the stave and cooling system are electrically grounded.
 
 Two end pieces called ``closeouts'' were then attached on either end of the stave. One
 is made of carbon filled PEEK and the other of aluminum. The closeouts have
@@ -153,7 +159,7 @@ fiber honeycomb, and the carbon foam. This provides a means to ground the
 materials in the stave since they are electrically isolated from the hybrid.
 
 Once everything was bonded to one of the face sheets, glue was applied to
-the other side and it was folded over 180~degrees to complete the stave.
+the other side and it was folded over \SI{180}{\degree} to complete the stave.
 Figure~\ref{fig:stave_assmb} shows the stave right before this step. Fully
 cured staves were inspected and then sent to MIT for further assembly.
 
@@ -169,7 +175,7 @@ carbon foam, `C', attached. The PEEK closeout, `E', and aluminum closeout, `F', 
 %
 \section{Sensor design}
 The IST sensors were designed by MIT and
-manufactured by Hamamatsu. The sensors are 300~$\mu$m silicon with 2 metallization
+manufactured by Hamamatsu. The sensors are \SI{300}{\micro\meter} silicon with 2 metallization
 layers. The backside has a sputtered aluminum coating to provide the bias voltage.
 This voltage reverse biases the PN junctions in the sensor which form the individual
 sensing elements (see figure~\ref{fig:sensor_sch}. Particles passing through the sensor will interact
@@ -192,9 +198,9 @@ group. A bond pad for each one of the sensing elements is grouped at one edge
 of the sensor and is arranged in a pattern which mirrors the bonding pattern for
 the APV chip (see figure~\ref{fig:bonding_pads}). This allows for much simpler bonding between the APV and the
 sensor, especially useful because the bonding pitch is so small. The sensing
-elements are arranged in a grid at a pitch of 6275~$\mu$m~$\times$~596~$\mu$m in 64 rows and 12
+elements are arranged in a grid at a pitch of \SI{6275}{\micro\meter}~$\times$~\SI{596}{\micro\meter} in 64 rows and 12
 columns. The bonding pads are arranged in 2 rows of 64 pads. The pads are
-58~$\mu$m~$\times$~136~$\mu$m with 30~$\mu$m between each pad and 80~$\mu$m between the 2 rows.
+\SI{58}{\micro\meter}~$\times$~\SI{136}{\micro\meter} with \SI{30}{\micro\meter} between each pad and \SI{80}{\micro\meter} between the 2 rows.
 
 \begin{figure}[ht]
 \begin{center}
@@ -206,8 +212,8 @@ columns. The bonding pads are arranged in 2 rows of 64 pads. The pads are
 %
 \section{APV chip}
 The APV25-s1 chip is the readout and pre-amplifier ASIC for the sensors. It has
-128 channels each with a charge sensitive pre-amplifier, shaper, and 4~$\mu$s long
-pipeline. Events are read into the pipeline at 40~MHz. Events in the pipeline are selected by
+128 channels each with a charge sensitive pre-amplifier, shaper, and \SI{4}{\micro\second} long
+pipeline. Events are read into the pipeline at \SI{40}{\mega\hertz}. Events in the pipeline are selected by
 triggers and marked for readout. A single differential pair per chip reads out each of
 the 128 channels in series for a selected event.
 
@@ -223,7 +229,7 @@ the left and right, and control bonding pads on the bottom.
 This ASIC was designed by the Imperial College in London for the Compact Muon
 Solenoid (CMS) running at the Large Hadron Collider (LHC)~\cite{ref:apv_nim}. It was designed
 for the high radiation environment present in the middle of a physics experiment
-and used an IBM 0.25~$\mu$m radiation hard process. Detailed information about the
+and used an IBM \SI{0.25}{\micro\meter} radiation hard process. Detailed information about the
 APV chip can be found in~\cite{ref:apv} and~\cite{ref:apv_nim}.  Figure~\ref{fig:apv} shows the APV 
 chip bonded to a stave.
 
@@ -333,7 +339,7 @@ alignment.  A technician uses a microscope to align the chips in the ``x'' coord
 \section{APV bonding and testing}
 Staves with APV chips attached were sent to the Instrumentation Division at
 Brookhaven National Laboratory for wire bonding and testing. Wire bonding was
-done on a Hesse \& Knipps Bond Jet 815 bonding machine using 1~mil aluminum
+done on a Hesse \& Knipps Bond Jet 815 bonding machine using \SI{1}{\mil} aluminum
 wire. A program for the bonding machine was written to wire bond each APV chip
 automatically, but inspection was done by a bonding technician during the
 bonding process to ensure the operation went smoothly.  Example images from the
@@ -412,7 +418,7 @@ they would be packaged and transported.
 
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=2in, keepaspectratio=true, angle=0]{graphics/si_align.jpg}
+\includegraphics[width=2in, keepaspectratio=true, angle=0]{graphics/si_align.JPG}
 \caption{The reticule in the microscope is used to align the bonding pads
 between a sensor and the APV chips which serve it.
 \label{fig:si_align}}
@@ -421,7 +427,7 @@ between a sensor and the APV chips which serve it.
 %
 \section{Silicon sensor bonding and testing}
 The bonding of the silicon sensors took place at the same Instrumentation
-Division at BNL on the same bonding equipment. Again 1~mil aluminum wire was
+Division at BNL on the same bonding equipment. Again \SI{1}{\mil} aluminum wire was
 used. An automatic bonding program was used but we required close supervision by
 the technician. Because of the size and pitch of the bonding pads it was
 important to catch any error and repair it before bonding continued. The
@@ -470,15 +476,15 @@ before being installed.
 
 \section{Optical survey}
 The structure which the staves are mounted to has a mechanical alignment
-accuracy of about 200~$\mu$m. However, once installed we require knowing the
+accuracy of about \SI{200}{\micro\meter}. However, once installed we require knowing the
 position of the detector to a higher degree of accuracy. We are able to do this
 by aligning tracks which pass through the IST as well as other detectors. We
 can reduce the number of tracks needed to do this alignment by knowing very
 precisely how the sensors on a single stave are located relative to each other.
 Before installation each of the staves was placed on an optical survey station
 and measured. The survey station, a Nikon VM-150, was used to measure each of
-the staves. We estimate the accuracy of these measurements to be about 5~$\mu$m in
-the plane of the detector and 50~$\mu$m out of plane. We combine this information
+the staves. We estimate the accuracy of these measurements to be about \SI{5}{\micro\meter} in
+the plane of the detector and \SI{50}{\micro\meter} out of plane. We combine this information
 along with the ``rough'' position of each detector inside the experiment and will
 be able to align the detector from tracks generated in this and other detectors
 (see figure~\ref{fig:survey}).
@@ -538,7 +544,6 @@ attach.  Their assembly process was very similar to the assembly process used
 at MIT but not identical; it is outside the scope of this paper to detail the
 two separate assembly processes.
 
-\section{References}
 \begin{thebibliography}{999}
 \bibitem{ref:daq}
 G. Visser {\it et al.}, ``A Readout System Utilizing the APV25 ASIC for the
