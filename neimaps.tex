@@ -1,4 +1,4 @@
-\documentclass[preprint,12pt]{elsarticle}
+\documentclass[1p,12pt]{elsarticle}
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{geometry}
@@ -7,7 +7,9 @@
 \DeclareSIUnit\mil{mil}
 \DeclareSIUnit\ounce{oz.}
 \geometry{textheight=10in, textwidth=6.5in}
-\journal{New England iMAPS}
+\journal{New England iMAPS for the 2014 Symposium \& Expo}
+%this changes the date to the date of the symposum
+\renewcommand*{\today}{May 6, 2014}
 \begin{document}
 \begin{frontmatter}
 \title{Design and fabrication of a highly integrated Silicon detector for the
@@ -55,11 +57,11 @@ and makes up the third tracking layer in a 4-layer vertex detector
 upgrade. It is comprised 24 staves, each of which is a flexible PCB wrapped
 around a carbon fiber core. Attached to each stave are 6 silicon sensors which
 can detect energetic particles which pass through them. These silicon sensors are read
-out by 36 APV chips which are connected to an external data acquisition system.
+out by 36 analog front-end chips which are connected to an external data acquisition system.
 
 \section{Hybrid design}
 Each stave holds the electrical substrate known as a ``hybrid.''  The hybrid is
-the flexible circuit onto which the silicon sensors, APV readout chips, and passive
+the flexible circuit onto which the silicon sensors, analog front-end chips, and passive
 components are mounted. The hybrid is permanently bonded to the stave during
 the stave manufacturing. The hybrid is broken up into 2 areas, the sensor area
 and the connector area. In the sensor
@@ -79,7 +81,7 @@ can be seen in figure~\ref{fig:passive}.
 
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=5in, keepaspectratio=true, angle=0]{graphics/hybrid.png}
+\includegraphics[width=5in, keepaspectratio=true, angle=0]{graphics/hybrid.jpg}
 \caption{Image showing one of the IST hybrids. `A' marks a sensor placement site,
 `B' marks an APV placement site, `C' marks a connector placement site.
 \label{fig:hybrid}}
@@ -117,7 +119,7 @@ produce any appreciable thermal load.
 
 \begin{figure}[ht]
 \begin{center}
-\includegraphics[height=1.7in, keepaspectratio=true, angle=0]{graphics/cooling_tube.png}
+\includegraphics[height=1.7in, keepaspectratio=true, angle=0]{graphics/cooling_tube.jpg}
 \includegraphics[height=1.7in, keepaspectratio=true, angle=0]{graphics/apv_thermal.jpg}
 \caption{Left shows the cooling tube running directly beneath the APV chips which generate nearly
 all of the heat on the stave.  Right shows a thermal image of a completed stave
@@ -135,7 +137,7 @@ radiation length but is homogeneous unlike the carbon fiber honeycomb. This
 uniformity makes it more suitable for wire bonding, so the carbon foam is
 located underneath any area where wire bonding will be performed.
 
-Cooling is provided by flowing a synthetic heat transfer fluid, 3M\textsuperscript{TM}
+Each stave nominally generates about \SI{12}{\watt} of heat. Cooling is provided by flowing a synthetic heat transfer fluid, 3M\textsuperscript{TM}
 Novec\textsuperscript{TM} 7200 Engineered Fluid,
 through the aluminum tube which runs through the carbon
 foam. Because the IST is installed in the central region of STAR, we needed a
